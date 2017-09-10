@@ -11,3 +11,6 @@ details.
 
 ---
 
+## [Unreleased]
+### Added
+- Main executable that will display all the *fixed* commits.
