@@ -16,7 +16,9 @@ IFS='
 FIXED_COMMIT_TITLES=$(
   $GIT log --grep=^fixup! --format=format:'%s' \
     | uniq \
-    | sed 's/fixup! //g'
+    | sed 's/fixup! //g' \
+    | sort \
+    | uniq
   )
 
 echo 'Fixed Commits.'
