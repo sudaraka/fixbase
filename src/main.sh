@@ -26,12 +26,10 @@ echo '--------------'
 
 for title in $FIXED_COMMIT_TITLES; do
   $GIT log \
-    --fixed-strings \
-    --grep="$title" \
+    --grep="^$title$" \
     --date=iso \
     --date-order \
-    --format=format:'%C(bold green)%h%C(reset) %C(yellow)%cd%C(reset) %C(white)%s%C(reset)' \
-    | grep -v 'fixup! '
+    --format=format:'%C(bold green)%h%C(reset) %C(yellow)%cd%C(reset) %C(white)%s%C(reset)'
 done
 
 echo ''
