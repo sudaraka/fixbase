@@ -29,7 +29,7 @@ for title in $FIXED_COMMIT_TITLES; do
     --grep="^$title$" \
     --date=iso \
     --date-order \
-    --format=format:'%C(bold green)%h%C(reset) %C(yellow)%cd%C(reset) %C(white)%s%C(reset)'
+    --format=format:'%C(bold green)%h%C(reset) %C(yellow)%ad%C(reset) %C(white)%s%C(reset)'
 done
 
 echo ''
